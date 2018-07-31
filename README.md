@@ -66,7 +66,12 @@ cd ~/Documents/muktek/assignments/project--devjobs
 # (2) Commit your changes from the previous demo
 git commit -m 'committing work from part-01'
 
-# (3) You will work on the part-02-router branch for this feature
+# (3) Merge your changes from part-01
+git checkout master
+git merge part-01-server
+
+# (4) You will create the part-02-router branch for this feature
+#      and complete your work there.      
 git checkout -b part-02-router
 
 
