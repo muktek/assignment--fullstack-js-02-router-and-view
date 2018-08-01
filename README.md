@@ -39,22 +39,33 @@ For this assignment, we will focus on creating the **express router** and the **
   - `pageRouter.js`
   - `apiRouter.js`
 
-- you must initialize the `express.Router()` in the 2 router files, export the routers in `module.exports`
+- you must initialize the `express.Router()` in the 2 router files, and export the routers in `module.exports`
   - for `pageRouter.js`
     - `/` route should send the simple string `<h1>HOME page</h1>`
-    - `/about` route should send the `<h1>ABOUT page</h1>`
+    - `/about` route should send the simple string `<h1>ABOUT page</h1>`
   - for `apiRouter.js`
-    - `/api/jobs` route should send _`jobsData`_
-    - `/api/companies` route should send _`companiesData`_ (see below)
+    - `/api/jobs` route should send _`jobsData`_ as JSON (see 'Extra' section below)
+    - `/api/companies` route should send _`companiesData`_ as JSON (see 'Extra' section below)
 
 - the routes must be imported in `server.js` and passed correctly to `app.use(....)`
 
-  ```js
-  // var pageRouter = require('./path/to/pageRouter.js')
-  // var apiRouter = require('./path/to/apiRouter.js')
+- In `server.js`, declare the default route behavior. You should have a default route-handler if a client requests a route.
+  - The default route should respond with the simple string `<h1>404 - PAGE NOT FOUND</h1>`
 
+- in `server.js`
+  ```js
+  // 1 - IMPORT THE ROUTES
+  //     (note: you will need to write the actual path)
+  var pageRouter = require('./path/to/pageRouter.js')
+  var apiRouter = require('./path/to/apiRouter.js')
+
+  // 2 - Apply the routes
   app.use('/', pageRouter);
   app.use('/api', pageRouter);
+
+
+  // 3 - DEFAULT ROUTE
+  app.use( /* write default route function*/ )
   ```
 
 
@@ -75,14 +86,15 @@ git merge part-01-app-server
 
 # (4) You will create the part-02-router branch for this feature
 #      and complete your work there.      
-git checkout -b part-02-app-routers
+git checkout -b part-02-server-router
 
 
 ```
 
 ## Extra
 
-#### `_jobsData_`
+#### _`jobsData`_
+
 ```js
 [
   {
