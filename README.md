@@ -49,9 +49,12 @@ For this assignment, we will focus on creating the **express router** and the **
 
 - the routes must be imported in `server.js` and passed correctly to `app.use(....)`
 
-
   ```js
-  app.use(express.static(__dirname + '/public'));
+  // var pageRouter = require('./path/to/pageRouter.js')
+  // var apiRouter = require('./path/to/apiRouter.js')
+
+  app.use('/', pageRouter);
+  app.use('/api', pageRouter);
   ```
 
 
@@ -66,7 +69,7 @@ cd ~/Documents/muktek/assignments/project--devjobs
 # (2) Commit your changes from the previous demo
 git commit -m 'committing work from part-01'
 
-# (3) Merge your changes from part-01
+# (3) Merge your changes from part-01 branch
 git checkout master
 git merge part-01-server
 
