@@ -19,7 +19,7 @@ For this assignment, we will focus on creating/configuring the **express router*
 
 ### Deliverable
 
-You will need to push your code to github on the `part-02-server-router` git branch for your `project--devjobs` repository
+You will need to push your code to github on the `part-02-server-router` git branch for your `project--devjobs` repository.
 
 ```
 git add .
