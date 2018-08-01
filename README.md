@@ -71,11 +71,11 @@ git commit -m 'committing work from part-01'
 
 # (3) Merge your changes from part-01 branch
 git checkout master
-git merge part-01-server
+git merge part-01-app-server
 
 # (4) You will create the part-02-router branch for this feature
 #      and complete your work there.      
-git checkout -b part-02-router
+git checkout -b part-02-app-routers
 
 
 ```
