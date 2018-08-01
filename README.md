@@ -14,7 +14,18 @@ You are going to build a full stack web application with node.js + React. In ord
   - RESTful routes
 
 ## The Assignment
+
 For this assignment, we will focus on creating/configuring the **express router** and the router files to server simple html text and json data. See the 'Overview' section for explicit instructions of what to do and the 'Expected Results' of expected output/functionality.
+
+### Deliverable
+
+You will need to push your code to github on the `part-02-server-router` git branch for your `project--devjobs` repository
+
+```
+git add .
+git commit -m '«your commit msg»'
+git push origin --all
+```
 
 ### Setup Instructions
 
